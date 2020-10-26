@@ -33,7 +33,9 @@ void addTask ()
     gets(add.name);                //read task name
 
     printf("\nWhen do you want to %s? [dd mm year]\n", add.name);
-    scanf("%s %s %s", &add.date, &add.month, &add.year);                      //read task date
+    scanf("%s", &add.date);
+    scanf("%s", &add.month);
+    scanf("%s", &add.year);                     //read task date
 
     //create file path
     char path[30];              //contains file path
@@ -346,7 +348,7 @@ void checkTask ()
     }
     else
     {
-        printf("\nIn %s/%s/2019, List of Your Task(s):\n", taskd, taskm, tasky);
+        printf("\nIn %s/%s/%s, List of Your Task(s):\n", taskd, taskm, tasky);
         printf("************************************************************\n\n");
 
         int i = 0;
